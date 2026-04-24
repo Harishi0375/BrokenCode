@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://catacombs_gen_123"]
+
+[ext_resource type="Script" path="res://scripts/managers/DungeonGenerator.gd" id="1_script"]
+
+[node name="CatacombsGenerator" type="Node2D" node_paths=PackedStringArray("floor_layer", "wall_layer")]
+script = ExtResource("1_script")
+floor_layer = NodePath("FloorLayer")
+wall_layer = NodePath("WallLayer")
+
+[node name="FloorLayer" type="TileMapLayer" parent="."]
+
+[node name="WallLayer" type="TileMapLayer" parent="."]
