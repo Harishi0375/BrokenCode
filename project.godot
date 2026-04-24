@@ -16,6 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Guardians Fall"
 config/description="2D story-driven action-adventure game built in Godot 4."
+run/main_scene="uid://map"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
