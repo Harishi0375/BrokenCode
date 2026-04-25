@@ -14,12 +14,17 @@ var stamina_recharge_rate : float = 15.0
 var is_wounded : bool = false
 var can_attack : bool = true
 
+@onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
+
 func _physics_process(delta):
 	handle_movement(delta)
 
 func handle_movement(delta):
 	# Get input direction
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	if input_dir.x != 0:
+		animated_sprite.flip_h = input_dir.x < 0
 	
 	# Determine current speed based on state and sprinting
 	var current_speed = speed
@@ -33,6 +38,14 @@ func handle_movement(delta):
 	
 	# Apply velocity
 	velocity = input_dir * current_speed
+	
+	if velocity.length() > 0:
+		if current_speed == sprint_speed:
+			animated_sprite.play("dash")
+		else:
+			animated_sprite.play("run")
+	else:
+		animated_sprite.play("idle")
 	
 	# Move and slide
 	move_and_slide()

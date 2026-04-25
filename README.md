@@ -137,9 +137,12 @@ on sight.
 res://
 ├── scenes/
 │   ├── maps/
-│   │   ├── Map1_Village.tscn
-│   │   ├── Map2_DesolateLands.tscn
-│   │   └── Map3_IronMines.tscn
+│   │   ├── map_2/
+│   │   │   ├── Map.tscn
+│   │   │   ├── base_layer_2.tscn
+│   │   │   ├── walls_1.tscn
+│   │   │   └── tileset.png
+│   │   └── CatacombsGenerator.tscn
 │   ├── entities/
 │   │   ├── Player.tscn
 │   │   ├── enemies/
@@ -186,6 +189,7 @@ res://
 │   │   └── VisionGem.gd
 │   ├── managers/
 │   │   ├── GameManager.gd
+│   │   ├── DungeonGenerator.gd
 │   │   ├── MapManager.gd
 │   │   └── UIManager.gd
 │   └── ui/
@@ -312,20 +316,22 @@ res://
 
 Start with this order — do not skip ahead:
 
-1. Player movement (top-down WASD)
-2. Player health system + HUD health bar
-3. Basic melee attack
-4. One enemy that chases player (Corrupted Villager)
-5. Enemy takes damage and dies
-6. Player takes damage from enemy contact
-7. Item pickup system (Base item)
-8. Map transition system (exit trigger → load next scene)
-9. Map 1 full implementation
-10. Map 2 full implementation (zombie + sprint + bandage)
-11. Map 3 full implementation (goblins + puzzles)
-12. Main Menu scene
-13. Game Over scene
-14. Polish (sound, animations, visual effects)
+1. [x] Player movement (top-down WASD/Arrow Keys with sprint & stamina)
+2. [x] Setup Global GameManager (Health & Inventory persistence)
+3. [x] Integrate Teammate's Animated Player (Hero Knight 2)
+4. [x] Map 1 top-down integration & structure layout (Map 2)
+5. [x] Procedural Catacombs Dungeon Generator (L-shaped corridors, random rooms, prop spawning)
+6. [ ] Player health system + HUD health bar
+7. [ ] Basic melee attack
+8. [ ] One enemy that chases player (Corrupted Villager)
+9. [ ] Enemy takes damage and dies
+10. [ ] Player takes damage from enemy contact
+11. [ ] Item pickup system (Base item)
+12. [ ] Map transition system (exit trigger → load next scene)
+13. [ ] Map 2 full implementation (zombie + sprint + bandage)
+14. [ ] Map 3 full implementation (goblins + puzzles)
+15. [ ] Main Menu & Game Over scenes
+16. [ ] Polish (sound, animations, visual effects)
 
 ---
 
