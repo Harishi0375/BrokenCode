@@ -137,9 +137,12 @@ on sight.
 res://
 ├── scenes/
 │   ├── maps/
-│   │   └── map_2/
-│   │       ├── tile_map.tscn
-│   │       └── mainlevbuild.png
+│   │   ├── map_2/
+│   │   │   ├── Map.tscn
+│   │   │   ├── base_layer_2.tscn
+│   │   │   ├── walls_1.tscn
+│   │   │   └── tileset.png
+│   │   └── CatacombsGenerator.tscn
 │   ├── entities/
 │   │   ├── Player.tscn
 │   │   ├── enemies/
@@ -186,6 +189,7 @@ res://
 │   │   └── VisionGem.gd
 │   ├── managers/
 │   │   ├── GameManager.gd
+│   │   ├── DungeonGenerator.gd
 │   │   ├── MapManager.gd
 │   │   └── UIManager.gd
 │   └── ui/
@@ -312,21 +316,21 @@ res://
 
 Start with this order — do not skip ahead:
 
-1. [x] Player movement (top-down WASD)
-2. [x] Setup custom unified TileMap (tile_map.tscn)
-3. [x] Integrate Player and Camera tracking into Map
-4. [ ] Player health system + HUD health bar
-5. [ ] Basic melee attack
-6. [ ] One enemy that chases player (Corrupted Villager)
-7. [ ] Enemy takes damage and dies
-8. [ ] Player takes damage from enemy contact
-9. [ ] Item pickup system (Base item)
-10. [ ] Map transition system (exit trigger → load next scene)
-11. [ ] Map 1 full implementation
-12. [ ] Map 2 full implementation (zombie + sprint + bandage)
-13. [ ] Map 3 full implementation (goblins + puzzles)
-14. [ ] Main Menu scene
-15. [ ] Game Over scene
+1. [x] Player movement (top-down WASD/Arrow Keys with sprint & stamina)
+2. [x] Setup Global GameManager (Health & Inventory persistence)
+3. [x] Integrate Teammate's Animated Player (Hero Knight 2)
+4. [x] Map 1 top-down integration & structure layout (Map 2)
+5. [x] Procedural Catacombs Dungeon Generator (L-shaped corridors, random rooms, prop spawning)
+6. [ ] Player health system + HUD health bar
+7. [ ] Basic melee attack
+8. [ ] One enemy that chases player (Corrupted Villager)
+9. [ ] Enemy takes damage and dies
+10. [ ] Player takes damage from enemy contact
+11. [ ] Item pickup system (Base item)
+12. [ ] Map transition system (exit trigger → load next scene)
+13. [ ] Map 2 full implementation (zombie + sprint + bandage)
+14. [ ] Map 3 full implementation (goblins + puzzles)
+15. [ ] Main Menu & Game Over scenes
 16. [ ] Polish (sound, animations, visual effects)
 
 ---

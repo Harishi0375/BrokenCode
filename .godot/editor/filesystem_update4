@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 res://scripts/enemies/BaseEnemy.gd
 res://scripts/enemies/CorruptedVillager.gd
 res://scripts/managers/DungeonGenerator.gd
 res://scripts/managers/GameManager.gd
 res://scripts/player/Player.gd
+=======
+res://scenes/maps/map_2/tile_map.tscn
+>>>>>>> 2aa0d09 (new commit)

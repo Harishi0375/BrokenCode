@@ -9,8 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://6vpp168655xd" path="res://assets/sprites/player/Hero_Knight_2/Take Hit.png" id="7_3v2ag"]
 [ext_resource type="Script" path="res://scripts/player/Player.gd" id="2_script"]
 
-
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(0, 0, 140, 140)
