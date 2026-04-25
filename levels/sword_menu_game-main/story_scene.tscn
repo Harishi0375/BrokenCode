@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d36re43pv21mc"]
+
+[ext_resource type="Texture2D" uid="uid://cr1lepph3crbl" path="res://Gemini_Generated_Image_zg9t20zg9t20zg9t (1).png" id="1_7jyys"]
+[ext_resource type="Script" uid="uid://t62p1u4eqypa" path="res://story_scene.gd" id="1_8n8t3"]
+
+[sub_resource type="SystemFont" id="SystemFont_8n8t3"]
+font_names = PackedStringArray("Georgia", "Palatino", "serif")
+font_weight = 900
+
+[node name="StoryScene" type="Node2D" unique_id=1674719575]
+scale = Vector2(1.0169299, 1.016046)
+script = ExtResource("1_8n8t3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1980309654]
+scale = Vector2(0.42309558, 0.4668999)
+texture = ExtResource("1_7jyys")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=916881700]
+position = Vector2(580, 400)
+
+[node name="Label" type="Label" parent="." unique_id=541580150]
+offset_left = 380.0
+offset_top = 250.0
+offset_right = 780.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(0.1, 0.05, 0.05, 1)
+theme_override_fonts/font = SubResource("SystemFont_8n8t3")
+theme_override_font_sizes/font_size = 48
+text = "AND
+THE 
+QUEST 
+BEGINS!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bdpxif3mjr7k0"]
+
+[ext_resource type="PackedScene" uid="uid://q7pp7rnf1dne" path="res://levels/level_2/scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://csrn3ldmcr33l" path="res://levels/level_2/scenes/goblin.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bmyqe2jkjh2xj" path="res://levels/level_2/scenes/skeleton.tscn" id="3_lnu2h"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=932138725]
+
+[node name="player" parent="." unique_id=50171480 instance=ExtResource("1_uwrxv")]
+position = Vector2(82, 61)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=725478773]
+position = Vector2(83, 51)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1049428515]
+position = Vector2(83, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=744706490]
+position = Vector2(5, 1)
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="Goblin" parent="." unique_id=1487584689 instance=ExtResource("2_yqjtg")]
+position = Vector2(-35, -9)
+
+[node name="Skeleton" parent="." unique_id=928683072 instance=ExtResource("3_lnu2h")]
+position = Vector2(128, 53)

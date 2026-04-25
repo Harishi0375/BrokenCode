@@ -41,29 +41,24 @@ Level 2 is a combat-heavy maze where the player must fight through a massive hor
 
 ```
 res://
-├── assets/                    # All visual and audio assets
-│   ├── Monsters_Creatures_Fantasy/ # Goblin and Skeleton sprites
-│   ├── Hero Knight 2/         # Player sprites
-│   └── maps/                  # Tilesets and level textures
-├── scenes/
-│   ├── entities/              # Player and Enemy scenes
-│   ├── maps/
-│   │   └── map_2/             # Level 2 Map and TileMap
-│   └── ui/                    # HUD and End-screen UI
+├── assets/                    # Shared visual and audio assets
+│   ├── sprites/
+│   │   ├── player/            # Shared player sprites
+│   │   └── enemies/           # Organized goblin/skeleton sprites
+│   └── audio/
+├── levels/
+│   ├── level_1/               # (Reserved for teammate)
+│   └── level_2/               # Current Level (The Iron Mines)
+│       ├── scenes/
+│       │   ├── entities/      # Level-specific player/enemies
+│       │   └── maps/          # Level-specific TileMaps
+│       └── scripts/
+│           ├── player/        # Level-specific movement/physics
+│           ├── enemies/       # Level-specific AI
+│           └── managers/      # Level-specific systems
 ├── scripts/
-│   ├── player/
-│   │   └── Player.gd          # Main player logic (Combat, Movement, HP)
-│   ├── enemies/
-│   │   └── enemy.gd           # Unified AI (Skeletons & Goblins)
-│   ├── managers/
-│   │   ├── GameManager.gd     # Singleton: Hearts, Lives, Pausing
-│   │   ├── MapBoundary.gd     # Modular Wall & Collision Generator
-│   │   ├── WaveSpawner.gd     # Modular Enemy Spawner
-│   │   └── stairs_area.gd     # Victory trigger logic
-│   └── ui/
-│       ├── HUD.gd             # Hearts, Overlays, Fade transitions
-│       └── CameraShake.gd     # Screen shake effects
-└── project.godot               # Main Godot configuration
+│   └── global/                # Shared systems (GameManager)
+└── project.godot
 ```
 
 ---
