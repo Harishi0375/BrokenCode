@@ -1,9 +1,0 @@
-res://scenes/maps/map_2/tile_map.tscn
-res://scripts/enemies/enemy.gd
-res://scripts/managers/WaveSpawner.gd
-res://scripts/player/Player.gd
-res://scenes/entities/Player.tscn
-res://scripts/managers/GameManager.gd
-res://scripts/ui/HUD.gd
-res://scripts/managers/stairs_area.gd
-res://scripts/managers/MapBoundary.gd

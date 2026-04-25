@@ -1,9 +1,0 @@
-CollisionShape2D
-Area2D
-Label
-TileMapLayer
-Node
-StaticBody2D
-Camera2D
-TileMap
-CanvasModulate
