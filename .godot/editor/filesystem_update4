@@ -1,5 +1,5 @@
-res://scenes/maps/map_1/Map.tscn
-res://scenes/maps/map_1/tileset.tres
+res://scripts/enemies/BaseEnemy.gd
+res://scripts/enemies/CorruptedVillager.gd
+res://scripts/managers/DungeonGenerator.gd
+res://scripts/managers/GameManager.gd
 res://scripts/player/Player.gd
-res://scenes/maps/map_2/Map.tscn
-res://scenes/maps/map_2/tileset.tres

@@ -137,9 +137,9 @@ on sight.
 res://
 ├── scenes/
 │   ├── maps/
-│   │   ├── Map1_Village.tscn
-│   │   ├── Map2_DesolateLands.tscn
-│   │   └── Map3_IronMines.tscn
+│   │   └── map_2/
+│   │       ├── tile_map.tscn
+│   │       └── mainlevbuild.png
 │   ├── entities/
 │   │   ├── Player.tscn
 │   │   ├── enemies/
@@ -312,20 +312,22 @@ res://
 
 Start with this order — do not skip ahead:
 
-1. Player movement (top-down WASD)
-2. Player health system + HUD health bar
-3. Basic melee attack
-4. One enemy that chases player (Corrupted Villager)
-5. Enemy takes damage and dies
-6. Player takes damage from enemy contact
-7. Item pickup system (Base item)
-8. Map transition system (exit trigger → load next scene)
-9. Map 1 full implementation
-10. Map 2 full implementation (zombie + sprint + bandage)
-11. Map 3 full implementation (goblins + puzzles)
-12. Main Menu scene
-13. Game Over scene
-14. Polish (sound, animations, visual effects)
+1. [x] Player movement (top-down WASD)
+2. [x] Setup custom unified TileMap (tile_map.tscn)
+3. [x] Integrate Player and Camera tracking into Map
+4. [ ] Player health system + HUD health bar
+5. [ ] Basic melee attack
+6. [ ] One enemy that chases player (Corrupted Villager)
+7. [ ] Enemy takes damage and dies
+8. [ ] Player takes damage from enemy contact
+9. [ ] Item pickup system (Base item)
+10. [ ] Map transition system (exit trigger → load next scene)
+11. [ ] Map 1 full implementation
+12. [ ] Map 2 full implementation (zombie + sprint + bandage)
+13. [ ] Map 3 full implementation (goblins + puzzles)
+14. [ ] Main Menu scene
+15. [ ] Game Over scene
+16. [ ] Polish (sound, animations, visual effects)
 
 ---
 
