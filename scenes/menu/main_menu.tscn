@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://c188poic68ix3"]
+
+[ext_resource type="Script" path="res://scripts/ui/menu/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/menu/Gemini_Generated_Image_74yght74yght74yg.png" id="2_jix8l"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/menu/2d swords/1.png" id="3_glbon"]
+
+[sub_resource type="SystemFont" id="SystemFont_fu7sn"]
+font_weight = 700
+
+[node name="MainMenu" type="Node2D" unique_id=1068236939]
+script = ExtResource("1_fu7sn")
+
+[node name="Map" type="Sprite2D" parent="." unique_id=1425312929]
+position = Vector2(572.5, 288.00003)
+scale = Vector2(0.6686092, 0.49519232)
+texture = ExtResource("2_jix8l")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=5855421]
+offset_left = 250.0
+offset_top = 200.0
+offset_right = 878.0
+offset_bottom = 320.0
+scale = Vector2(0.8931788, 1.0860184)
+pivot_offset = Vector2(250, 60)
+theme_override_colors/font_color = Color(0.8156863, 0.67058825, 0.29411766, 1)
+theme_override_colors/font_shadow_color = Color(0.101562075, 0.3000644, 0.30271545, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 86
+text = " BROKEN CODE"
+
+[node name="PlayButton" type="TextureButton" parent="." unique_id=1018077929]
+offset_left = 298.0
+offset_top = 474.99997
+offset_right = 351.0
+offset_bottom = 841.0
+rotation = -1.5707964
+scale = Vector2(2.158, 1.467)
+texture_normal = ExtResource("3_glbon")
+
+[node name="Label" type="Label" parent="PlayButton" unique_id=2142198687]
+layout_mode = 0
+offset_left = 41.241875
+offset_top = 224.26721
+offset_right = 95.27334
+offset_bottom = 333.958
+rotation = 1.5707964
+scale = Vector2(1.4177301, 0.96088773)
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = SubResource("SystemFont_fu7sn")
+theme_override_font_sizes/font_size = 18
+text = "PLAY"
+
+[node name="ExitButton" type="TextureButton" parent="." unique_id=2032012589]
+offset_left = 830.0
+offset_top = 478.99997
+offset_right = 883.0
+offset_bottom = 845.0
+rotation = 1.5707964
+scale = Vector2(2.158, 1.467)
+texture_normal = ExtResource("3_glbon")
+
+[node name="Label" type="Label" parent="ExitButton" unique_id=709661407]
+layout_mode = 0
+offset_left = 12.511607
+offset_top = 282.2086
+offset_right = 54.51161
+offset_bottom = 310.2086
+rotation = -1.5707964
+scale = Vector2(1.1692092, 0.8759503)
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+text = "EXIT"
+
+[node name="NoEscapeBubble" type="ColorRect" parent="." unique_id=83934717]
+visible = false
+offset_left = 600.0
+offset_top = 100.0
+offset_right = 850.0
+offset_bottom = 180.0
+
+[node name="Border" type="ReferenceRect" parent="NoEscapeBubble" unique_id=779243703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0, 0, 0, 1)
+border_width = 6.0
+editor_only = false
+
+[node name="Label" type="Label" parent="NoEscapeBubble" unique_id=477166652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "NO ESCAPE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="PlayButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="ExitButton" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="mouse_exited" from="ExitButton" to="." method="_on_exit_button_mouse_exited"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
