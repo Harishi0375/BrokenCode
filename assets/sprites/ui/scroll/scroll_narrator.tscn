@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dc0e78k0okmke"]
+
+[ext_resource type="Script" uid="uid://dlqsgrprlr3dy" path="res://assets/sprites/ui/scroll/scroll_narrator.gd" id="1_pxasm"]
+[ext_resource type="Texture2D" uid="uid://pk33hnd56qt8" path="res://assets/sprites/ui/scroll/frameForNarrator.png" id="2_wy7oo"]
+
+[node name="ScrollNarrator" type="Control" unique_id=1750698023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pxasm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1388187460]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_wy7oo")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=450623960]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
