@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pk33hnd56qt8"
-path="res://.godot/imported/frameForNarrator.png-fda5db5818c17754ff1c99c80c0158dd.ctex"
+path="res://.godot/imported/frameForNarrator.png-31e166496ea484cb44552e365c7f9237.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/scroll/frameForNarrator.png"
-dest_files=["res://.godot/imported/frameForNarrator.png-fda5db5818c17754ff1c99c80c0158dd.ctex"]
+source_file="res://assets/sprites/ui/scroll/narator/frameForNarrator.png"
+dest_files=["res://.godot/imported/frameForNarrator.png-31e166496ea484cb44552e365c7f9237.ctex"]
 
 [params]
 
