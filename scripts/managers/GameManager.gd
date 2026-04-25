@@ -1,6 +1,6 @@
 extends Node
 
-var current_map : String = ""
+var current_lives : int = 3
 var player_health : int = 200
 var player_max_health : int = 200
 var inventory : Array = []
@@ -9,39 +9,71 @@ var wave_spawner_script = preload("res://scripts/managers/WaveSpawner.gd")
 var hud_script = preload("res://scripts/ui/HUD.gd")
 
 func _ready():
-	print("GameManager initialized.")
-	# Wait for the main scene to be ready before injecting our HUD and Spawner
+	print("GameManager: Initialized.")
+	RenderingServer.set_default_clear_color(Color.BLACK)
+	get_tree().node_added.connect(_on_node_added)
 	call_deferred("setup_game_systems")
 
+func _on_node_added(node):
+	if node.name == "MainGame":
+		call_deferred("setup_game_systems")
+
 func setup_game_systems():
-	var root = get_tree().root
-	# The main game node in tile_map.tscn is named "MainGame"
-	var main_game = root.get_node_or_null("MainGame")
-	if main_game:
-		# Add HUD properly
-		var hud = hud_script.new()
-		main_game.add_child(hud)
+	var main_game = get_tree().current_scene
+	if main_game == null: return
+	if not main_game.has_node("TileMap"): return
+
+	if main_game.has_node("HUD"): return
+
+	print("GameManager: Injecting HUD.")
+	
+	var hud = hud_script.new()
+	hud.name = "HUD"
+	# Ensure HUD keeps working when game is paused
+	hud.process_mode = Node.PROCESS_MODE_ALWAYS
+	main_game.add_child(hud)
+	
+	var spawner = wave_spawner_script.new()
+	spawner.name = "WaveSpawner"
+	main_game.add_child(spawner)
+	
+	call_deferred("update_hud_state")
+
+func update_hud_state():
+	var hud = get_tree().current_scene.get_node_or_null("HUD")
+	if hud:
+		hud.update_health(player_health, player_max_health)
+		hud.update_lives(current_lives)
+
+func on_player_died():
+	current_lives -= 1
+	var hud = get_tree().current_scene.get_node_or_null("HUD")
+	if hud:
+		hud.update_lives(current_lives)
 		
-		# Add Wave Spawner properly
-		var spawner = wave_spawner_script.new()
-		main_game.add_child(spawner)
+	# Pause the game so enemies stop attacking
+	get_tree().paused = true
+	
+	if current_lives > 0:
+		if hud: hud.show_death_screen(false)
+	else:
+		if hud: hud.show_death_screen(true)
 
-# Call this when player takes damage or heals
-func update_health(amount: int):
-	player_health = clamp(player_health + amount, 0, player_max_health)
-	if player_health <= 0:
-		game_over()
+func on_victory():
+	# Pause the game so enemies stop attacking
+	get_tree().paused = true
+	
+	var hud = get_tree().current_scene.get_node_or_null("HUD")
+	if hud:
+		hud.show_victory_screen()
 
-# Add an item to the global inventory
-func add_item(item_name: String):
-	if not item_name in inventory:
-		inventory.append(item_name)
-		print("Picked up item: ", item_name)
+func respawn_player():
+	get_tree().paused = false
+	player_health = player_max_health
+	get_tree().reload_current_scene()
 
-# Check if an item is in the inventory
-func has_item(item_name: String) -> bool:
-	return item_name in inventory
-
-# Game over logic placeholder
-func game_over():
-	print("Game Over!")
+func restart_game():
+	get_tree().paused = false
+	current_lives = 3
+	player_health = player_max_health
+	get_tree().reload_current_scene()
