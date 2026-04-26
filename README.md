@@ -1,97 +1,98 @@
-# 🗡️ Guardians Fall — 2D Action Adventure
-## Godot 4 | Press Play Hackathon 2026 | Constructor University Bremen
+# 🗡️ BrokenCode
+
+![BrokenCode Hero Image](assets/readme/hero_image.png)
+
+## 🎮 Press Play Hackathon 2026 — Team 17
+**Constructor University Bremen | Google Developer Group (GDG) on Campus**
 
 ---
 
-## 📖 Project Overview
-**Guardians Fall** is a top-down 2D action game featuring tight combat, procedural-style map generation (physics-based), and intense horde management. This repository currently contains the **fully completed Level 2 (The Iron Mines)**.
+### 📖 The Idea: A Glitch in the Matrix (Medieval Edition)
+The jam theme is **Medieval**, and we leaned into it twice. You play as a game developer who was building a medieval game for the jam, when their computer glitches and pulls them inside it. 
 
-### 🚀 Key Technical Features
-- **Modular Level Architecture**: Scripts are designed to be attached to any TileMap to instantly add walls, collision, and enemy spawning.
-- **Physics-Based Map Generation**: Automatic conversion of TileMap edges into solid physics bodies.
-- **Intense Combat**: AOE (Area of Effect) sword attacks, screen shake, and knockback.
-- **Horde AI**: Scalable enemy spawning (up to 60+ entities) with avoidance logic to prevent stacking.
-- **Global State Management**: Persistent hearts/lives and health system across scenes via `GameManager`.
+You are now trapped inside your own unfinished medieval worlds, forced to play through the buggy, incomplete games you never got to finish—from the inside. The medieval setting isn't just aesthetic; it's the reason you're stuck there in the first place.
 
 ---
 
-## 🗺️ Level 2: The Iron Mines (Status: COMPLETE)
-Level 2 is a combat-heavy maze where the player must fight through a massive horde of 60 enemies to reach the stairs.
+### 🕹️ Core Mechanics
+The game is split into two distinct levels, each with completely different gameplay because they were originally two separate abandoned projects merged into one glitchy reality:
 
-### Objectives:
-1. Survive the initial horde.
-2. Navigate the maze while managing stamina (Sprint/Dash).
-3. Reach the **Stairs** at the end of the map to trigger **Victory**.
+#### **Level 1 — The Maze**
+*   **Genre:** Top-down Medieval Labyrinth
+*   **Mission:** Navigate through corridors while avoiding goblins and skeleton enemies. Find the exit to escape and return to the real world.
 
----
-
-## 🎮 Controls
-
-| Key | Action | Description |
-|---|---|---|
-| **WASD / Arrows** | Move | 8-way directional movement |
-| **Shift** | Sprint | Increases speed significantly |
-| **Space** | Dash | Quick tactical burst in movement direction |
-| **F / Left Click** | Attack | AOE sword swing (hits all enemies in range) |
-| **ESC** | Pause | (Game pauses automatically on Death/Win) |
+#### **Level 2 — The Cellar**
+*   **Genre:** Side-view Vertical Medieval Dungeon
+*   **Mission:** Climb floors by navigating through doors. 
+*   **⚠️ High Stakes:** Avoid the flying eyes—one touch from them means instant death. 
+*   **The Twist:** Die five times to trigger the true ending.
 
 ---
 
-## 🧱 File Structure
+### ⌨️ Controls
 
-```
-res://
-├── assets/                    # Shared visual and audio assets
-│   ├── sprites/
-│   │   ├── player/            # Shared player sprites
-│   │   └── enemies/           # Organized goblin/skeleton sprites
-│   └── audio/
-├── levels/
-│   ├── level_1/               # (Reserved for teammate)
-│   └── level_2/               # Current Level (The Iron Mines)
-│       ├── scenes/
-│       │   ├── entities/      # Level-specific player/enemies
-│       │   └── maps/          # Level-specific TileMaps
-│       └── scripts/
-│           ├── player/        # Level-specific movement/physics
-│           ├── enemies/       # Level-specific AI
-│           └── managers/      # Level-specific systems
-├── scripts/
-│   └── global/                # Shared systems (GameManager)
-└── project.godot
-```
+#### **Level 1 — The Maze**
+| Key | Action |
+| :--- | :--- |
+| **WASD / Arrows** | Move |
+| **F Key** | Attack |
+| **Space Bar** | Dash |
+| **Any Key** | Skip Dialog |
+
+#### **Level 2 — The Cellar**
+| Key | Action |
+| :--- | :--- |
+| **WASD / Arrows** | Move |
+| **F Key** | Attack |
+| **Space Bar / Up Arrow** | Jump |
+| **Any Key** | Skip Dialog |
 
 ---
 
-## 🛠️ Modular Systems (Guide for Level 1)
-All scripts are **Export-Ready**. To use them in a new level:
-
-1. **MapBoundary.gd**: 
-   - Attach this to any `TileMap`.
-   - In the Inspector, set your Wall Tile IDs.
-   - It will automatically generate collision polygons for your walls and a "Void" boundary.
-2. **WaveSpawner.gd**: 
-   - Attach to any Node in your scene.
-   - Set `Max Enemies` and `Spawn Interval` in the Inspector.
-   - It automatically finds the TileMap and spawns enemies on floor tiles.
-3. **stairs_area.gd**:
-   - Attach to an `Area2D` over your exit.
-   - It will automatically trigger the "Victory" sequence and pause the game.
+### 🚧 Development Challenges & Difficulties
+Creating a game in a 48-hour hackathon environment is a journey of its own:
+*   **Merging Realities:** We worked on different Godot files and merging them together took the majority of our time. Dealing with version control in a fast-paced environment was a level of its own!
+*   **Enemy Spawning Logic:** We encountered several bugs when spawning enemy characters around the map, sometimes resulting in enemies appearing in invalid tiles.
+*   **Physics Glitches:** High-speed dashing sometimes causes the player to glitch, which actually fits our theme of being stuck in a "Broken" game.
 
 ---
 
-## 🧪 Current Game Logic
-- **Health**: 200 HP. Regeneration on scene reload.
-- **Lives**: 3 Hearts. Losing all hearts triggers **Game Over**.
-- **Enemy Scaling**: 
-  - **Skeletons**: High health (40 HP), slower speed.
-  - **Goblins**: Low health (20 HP), fast speed.
-- **Combat**: 15 Damage per swing. Hits every enemy in an 80x80 radius.
-- **Victory Condition**: Reaching the `Area2D` stairs.
+### 🐞 Known Issues & Bugs
+*   Enemies may spawn on invalid tiles in the maze.
+*   Player may glitch when dashing at high speed.
+*   Minor UI artifacts during scene transitions.
 
 ---
 
-## 👥 Team
-- **Project Location**: Constructor University Bremen
-- **Hackathon**: Press Play 2026
-- **Hosted by**: DCS & GDG on Campus
+### 🛠️ Built With & Credits
+Our world was built using a mix of original art, AI-assisted design, and incredible open-source assets from the game dev community:
+
+*   **Engine:** [Godot Engine](https://godotengine.org/)
+*   **Art Tools:** [Pixilart](https://www.pixilart.com/) (Original Pixel Art)
+*   **Asset Attribution:**
+    *   **Main Character (Lvl 1):** ["Hero Knight 2"](https://luizmelo.itch.io/hero-knight-2) by LuizMelo
+    *   **Main Character (Lvl 2):** ["Warrior-Free Animation Set V1.3"](https://clembod.itch.io/warrior-free-animation-set) by Clembod
+    *   **Enemy Characters:** ["Monsters Creatures Fantasy"](https://luizmelo.itch.io/monsters-creatures-fantasy) by LuizMelo
+    *   **Level 1 Map & Environment:** ["Rogue Fantasy Catacombs"](https://szadiart.itch.io/rogue-fantasy-catacombs) by Szadiart
+    *   **Level 1 Tileset:** Custom-built using Godot's internal tools and Szadiart's assets.
+    *   **Level 2 Tileset:** Custom, generated with ChatGPT.
+    *   **Cinematics:** Intro cutscene generated with Google Gemini.
+
+---
+
+### 🔗 Play Online
+The game is available to play on itch.io:
+[**Play BrokenCode on itch.io**](https://harishi0375.itch.io/brokencode)
+
+---
+
+### 👥 Contributors (Team 17)
+*   **Harishi Velavan**
+*   **Aarya Chandrashekhar Chavan**
+*   **Zeynep Yurtsever**
+*   **Ashraya Banskota**
+*   **Shaz Ansari**
+*   **Nour Chatty**
+
+*This project was created for the [Press Play Hackathon 2026](https://pressplay-cub.com/), organized by the Google Developer Group (GDG) on Campus at Constructor University Bremen.*
+
