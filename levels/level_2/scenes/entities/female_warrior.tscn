@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://bjn7cswrjqdmh"]
+
+[ext_resource type="Script" path="res://levels/level_2/scripts/player/female_warrior.gd" id="1_8terf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_1.png" id="2_kgnai"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_2.png" id="3_qgc1b"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_4.png" id="4_xyah8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_3.png" id="5_ieotq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_5.png" id="6_5yitd"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_6.png" id="7_ben4w"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_7.png" id="8_1slo4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_8.png" id="9_frd5i"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_9.png" id="10_qtrjf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_10.png" id="11_vld0d"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_11.png" id="12_oioel"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Attack/Warrior_Attack_12.png" id="13_tkw0g"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_1.png" id="14_8qh3w"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_2.png" id="15_d0nn6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_3.png" id="16_k1ghl"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_4.png" id="17_nkow7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_5.png" id="18_6bj1n"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_6.png" id="19_ysv7s"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_7.png" id="20_aeeah"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_8.png" id="21_fj87u"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_9.png" id="22_qty4e"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_10.png" id="23_ey5ml"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Death-Effect/Warrior_Death_11.png" id="24_hnnly"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_1.png" id="25_tic6h"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_2.png" id="26_01mug"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_3.png" id="27_wbc1t"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_4.png" id="28_3o3sp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_5.png" id="29_xvh6o"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/idle/Warrior_Idle_6.png" id="30_a2w52"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_1.png" id="31_ntg6g"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Jump/Warrior_Jump_1.png" id="31_xyah8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_2.png" id="32_8aqyp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Jump/Warrior_Jump_2.png" id="32_ieotq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Jump/Warrior_Jump_3.png" id="33_5yitd"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_3.png" id="33_anqa8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_4.png" id="34_klciq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_5.png" id="35_fn6rq"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_6.png" id="36_dmmbd"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_7.png" id="37_61s0g"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player/Individual Sprite/Run/Warrior_Run_8.png" id="38_gyh27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82dlh"]
+size = Vector2(21.125, 29.9375)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xke52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kgnai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qgc1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xyah8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ieotq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5yitd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ben4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1slo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_frd5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qtrjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vld0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oioel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tkw0g")
+}],
+"loop": false,
+"name": &"attack_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_8qh3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d0nn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k1ghl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nkow7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6bj1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ysv7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aeeah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fj87u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_qty4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ey5ml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hnnly")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_tic6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_01mug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_wbc1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3o3sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xvh6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a2w52")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_xyah8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ieotq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_5yitd")
+}],
+"loop": true,
+"name": &"jump_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ntg6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_8aqyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_anqa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_klciq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_fn6rq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_dmmbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_61s0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_gyh27")
+}],
+"loop": true,
+"name": &"run_right",
+"speed": 5.0
+}]
+
+[node name="female_warrior" type="CharacterBody2D" unique_id=156294044]
+scale = Vector2(3, 3)
+script = ExtResource("1_8terf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2130433261]
+position = Vector2(-2.9375, 1.59375)
+shape = SubResource("RectangleShape2D_82dlh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1383741]
+sprite_frames = SubResource("SpriteFrames_xke52")
+animation = &"jump_right"
+autoplay = "idle_right"
+frame_progress = 0.3936066
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

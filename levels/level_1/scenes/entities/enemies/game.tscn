@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bdpxif3mjr7k0"]
+
+[ext_resource type="PackedScene" uid="uid://q7pp7rnf1dne" path="res://levels/level_2/scenes/entities/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://csrn3ldmcr33l" path="res://levels/level_1/scenes/entities/enemies/goblin.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bmyqe2jkjh2xj" path="res://levels/level_2/scenes/entities/skeleton.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" path="res://levels/level_2/scenes/ui/level2_dialogue.tscn" id="4_diag"]
+[ext_resource type="PackedScene" path="res://levels/level_2/scenes/managers/dialogue_trigger.tscn" id="5_trig"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
+[node name="Game" type="Node2D" unique_id=932138725]
+
+[node name="player" parent="." unique_id=50171480 instance=ExtResource("1_uwrxv")]
+position = Vector2(82, 61)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=725478773]
+position = Vector2(83, 51)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1049428515]
+position = Vector2(83, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=744706490]
+position = Vector2(5, 1)
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="Goblin" parent="." unique_id=1487584689 instance=ExtResource("2_yqjtg")]
+position = Vector2(-35, -9)
+
+[node name="Skeleton" parent="." unique_id=928683072 instance=ExtResource("3_lnu2h")]
+position = Vector2(128, 53)
+
+[node name="Level2Dialogue" parent="." unique_id=430582036 instance=ExtResource("4_diag")]
+
+[node name="TriggerOnEntry" parent="." unique_id=239071959 instance=ExtResource("5_trig")]
+position = Vector2(80, 60)
+dialogue_lines = Array[String](["[P] — Okay. This one I left because it was 'too generic.' It's fine. It's gonna be fine. Easy even.", "[P] — ...It's not generic. It's a nightmare. I built an actual nightmare."])
+
+[node name="TriggerControls" parent="." unique_id=1927880256 instance=ExtResource("5_trig")]
+position = Vector2(120, 60)
+dialogue_lines = Array[String](["[P] — Wait. WAIT. Arrow keys? I switched to arrow keys for this one? The first game used WASD — why would I change that? Just stick to one thing! Why do I always try to be so unique every single time?!"])
+
+[node name="TriggerEnemies" parent="." unique_id=445208563 instance=ExtResource("5_trig")]
+position = Vector2(-20, -10)
+dialogue_lines = Array[String](["[P] — Okay so they're spawning from empty tiles instead of actual spawn points. Classic. Truly classic work from me.", "[P] — On the bright side at least I can predict where they WON'T spawn."])
+
+[node name="TriggerLost" parent="." unique_id=1561081385 instance=ExtResource("5_trig")]
+position = Vector2(0, 50)
+dialogue_lines = Array[String](["[P] — This map is SO huge. I designed this map. I have no idea where I am.", "[P] — Lowkey... the first game wasn't that bad. Like it was simple but at least I knew where I was going. Why did I even start this one."])
+
+[node name="TriggerNearExit" parent="." unique_id=1764902540 instance=ExtResource("5_trig")]
+position = Vector2(200, 50)
+dialogue_lines = Array[String](["[P] — Please maze end. Please. I cannot postpone the game jam deadline. I cannot explain this to anyone."])
+
+[node name="TriggerCompletion" parent="." unique_id=1224006253 instance=ExtResource("5_trig")]
+position = Vector2(250, 50)
+dialogue_lines = Array[String](["[N] — That took you embarrassingly long. But okay — congrats. I genuinely didn't think you'd make it out of there.", "[P] — Neither did I."])
