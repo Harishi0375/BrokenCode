@@ -12,6 +12,9 @@ The jam theme is **Medieval**, and we leaned into it twice. You play as a game d
 
 You are now trapped inside your own unfinished medieval worlds, forced to play through the buggy, incomplete games you never got to finish—from the inside. The medieval setting isn't just aesthetic; it's the reason you're stuck there in the first place.
 
+### 🧠 Game Ideology & Logic
+**BrokenCode** is a meta-narrative exploration of the chaotic, often fragmented journey of game development, manifested as a glitch-fuelled medieval adventure. The game places players in the shoes of a developer who is physically pulled into their own unfinished, bug-ridden creation, forcing them to navigate through the literal remnants of abandoned ideas and merged codebases. From the claustrophobic, top-down labyrinths of "The Maze" where traditional combat meets unstable enemy AI, to the vertical descent of "The Cellar" where survival depends on dodging bats and lethal flying eyes rather than combat, BrokenCode embraces its "broken" nature as its core philosophy. By intentionally integrating merging conflicts, invalid spawn points, and physics glitches into the gameplay experience, the project serves as both a challenging 2D action game and a tribute to the beautiful mess that is collaborative software creation, ultimately challenging players to find the "true ending" hidden within the digital debris of an incomplete world.
+
 ---
 
 ### 🕹️ Core Mechanics
@@ -25,7 +28,7 @@ The game is split into two distinct levels, each with completely different gamep
 *   **Genre:** Side-view Vertical Medieval Dungeon
 *   **Mission:** Climb floors by navigating through doors. 
 *   **⚠️ High Stakes:** Avoid the flying eyes—one touch from them means instant death. 
-*   **The Twist:** Die five times to trigger the true ending.
+*   **The Twist:** You dont try to kill the enemy but you try to dodge the bats!
 
 ---
 
@@ -82,7 +85,7 @@ Our world was built using a mix of original art, AI-assisted design, and incredi
 
 ### 🔗 Play Online
 The game is available to play on itch.io:
-[**Play BrokenCode on itch.io**](https://harishi0375.itch.io/brokencode)
+[**Play BrokenCode on itch.io**](https://mickymouse67.itch.io/brokencode)
 
 ---
 
